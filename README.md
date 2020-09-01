@@ -9,11 +9,4 @@
 #### fine tuning
 - reference paper is included in this directory
 - tried three classical model MobileNetV2, DenseNet121 adn ResNet50
-- since cwt pics give squre input matrix directly and cwt worked better compared with mel on MobileNetV2(though mel input was resized to a smaller size 160*160), only cwt input was tried on DenseNet121 and ResNet50
-- ResNet50 with two simple top layer(GlobalAveragePooling2D and Dense(1)) and fine-tuned all its layer had the best accuracy of 0.8638015 (file: fine_tune_ResNet50_cwt.ipynb)
-- it was obviously overfitting while fine-tuing. tried reducing the trainable layer in ResNet50 and MobileNetV2 but it didn't help
-
-## ways of improvement
-- using inputs like spectrograms matrix directly
-- parallel several spectrograms matrix
-- using RNN architecture
+- ResNet50 trained on mel input with two simple top layer(GlobalAveragePooling2D and Dense(1)) and fine-tuned all its layer reached the best accuracy of 0.99213076 (file: fine_tune_ResNet50_mel.ipynb)
