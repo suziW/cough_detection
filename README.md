@@ -8,5 +8,10 @@
 
 #### fine tuning
 - reference paper is included in this directory
-- tried three classical model MobileNetV2, DenseNet121 adn ResNet50
-- ResNet50 trained on mel input with two simple top layer(GlobalAveragePooling2D and Dense(1)) and fine-tuned all its layer reached the best accuracy of 0.99213076 (file: fine_tune_ResNet50_mel.ipynb)
+- tried sevaral classical model MobileNetV2, DenseNet121, DensNet201, Xception and  ResNet50
+- **ResNet50 trained on mel input and fine-tuned all its layer reached the best accuracy of 0.9031477 (file: fine_tune_ResNet50_mel_dataAgumation.ipynb)**
+
+## ways of improvement
+- using inputs like spectrograms matrix directly
+- parallel several spectrograms matrix
+- using RNN architecture
